@@ -32,9 +32,9 @@ class HomePage extends StatelessWidget {
             //   alignment: Alignment.center,
             // ),
             child: BarakaImage(),
-            height: screenHeight,
-            bottom: 0,
-            left: -30,
+            // height: screenHeight,
+            left: -20,
+            right: -20,
           ),
           Positioned(
             left: 20,
