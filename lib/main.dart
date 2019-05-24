@@ -69,23 +69,7 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: 1.0),
-                      child: Material(
-                        borderRadius: BorderRadius.circular(30.0),
-                        shadowColor: Colors.white,
-                        elevation: 3.0,
-                        color: Color.fromRGBO(0, 0, 20, 1.0),
-                        child: MaterialButton(
-                          minWidth: 200.0,
-                          child: Text(
-                            'SIGN IN',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          onPressed: () async {},
-                        ),
-                      ),
-                    ),
+                    new CustomButton(),
                     Text(
                       'Forgot Password?',
                       style: TextStyle(color: Colors.white),
@@ -98,6 +82,33 @@ class HomePage extends StatelessWidget {
         ],
       ),
     ));
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  const CustomButton({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 1.0),
+      child: Material(
+        borderRadius: BorderRadius.circular(30.0),
+        shadowColor: Colors.white,
+        elevation: 3.0,
+        color: Color.fromRGBO(0, 0, 20, 1.0),
+        child: MaterialButton(
+          minWidth: 200.0,
+          child: Text(
+            'SIGN IN',
+            style: TextStyle(color: Colors.white),
+          ),
+          onPressed: () async {},
+        ),
+      ),
+    );
   }
 }
 
